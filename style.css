@@ -2,9 +2,19 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400");
 
 /* ======= General ======= */
+:root {
+  --body-bg: #aaaaaa; /* body background */
+  --white: #ffffff; /* card background */
+  --gray: #3a3a3a; /* header and menu item color */
+  --gray-additional: #787885; /* card description color*/
+  --gray3: #5e6366; /* rating text color */
+  --black: #000000; /* card title color */
+  --gray2: #18191f; /* cart, menu icon and price color */
+  --orange: #fb8200; /* rating icon color */
+}
 html {
-  font-size: 100%;
-} /*16px*/
+  font-size: 100%; /*16px*/
+}
 
 body {
   background: white;
