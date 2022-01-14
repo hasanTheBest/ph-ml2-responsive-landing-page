@@ -11,13 +11,24 @@
   --black: #000000; /* card title color */
   --gray2: #18191f; /* cart, menu icon and price color */
   --orange: #fb8200; /* rating icon color */
+  --pink: #e02c6d; /* Button */
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
 html {
   font-size: 100%; /*16px*/
 }
 
 body {
-  background: white;
+  background: var(--body-bg);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.75;
@@ -63,4 +74,111 @@ h5 {
 small,
 .text_small {
   font-size: 0.8rem;
+}
+
+/* ======== Header ======== */
+/* Navigation */
+.main-navigation {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+.logo > h4 {
+  margin: 0;
+  color: var(--gray);
+  font-weight: 500;
+  letter-spacing: 2;
+}
+
+.menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu > a {
+  display: inline-block;
+  color: var(--gray);
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.menu > a:focus,
+.menu > a:hover,
+.menu > a:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.toolbox {
+  display: flex;
+  align-items: center;
+}
+.toolbox > .icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  line-height: 3;
+  color: var(--gray2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.toolbox > .icon:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Banner */
+.banner {
+  display: flex;
+}
+.banner > div {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+.banner-title {
+  font-weight: 700;
+}
+.banner-lead-text {
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+.banner-btn {
+  background-color: var(--pink);
+  padding: 0.8rem 1.3rem;
+  border-radius: 0.5rem;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1.25px;
+  border: 0;
+}
+.banner-btn > i {
+  margin-left: 0.5rem;
+}
+
+.banner-btn:hover {
+  cursor: pointer;
+}
+
+/* Banner Image */
+.banner-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-image > img {
+  max-width: 70%;
+  height: auto;
+}
+
+/* Company Logos */
+.company-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+  border: 2px solid var(--gray3);
+}
+.company-logos > img {
+  max-height: 40px;
 }
