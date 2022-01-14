@@ -182,3 +182,76 @@ small,
 .company-logos > img {
   max-height: 40px;
 }
+
+/* ================
+  Gadgets Section
+=================== */
+.section-title {
+  text-align: center;
+}
+.gadget-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+.gadget-card {
+  background-color: var(--white);
+  padding: 1rem;
+}
+.gadget-image {
+  max-width: 100%;
+}
+.gadget-title {
+  margin: 1.5rem 0 1rem;
+}
+.gadget-price {
+  margin: 0 0 1rem;
+}
+.gadget-rating {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.gadget-rating > i {
+  color: var(--orange);
+}
+.gadget-rating > span {
+  color: var(--gray-additional);
+  margin-left: 1rem;
+}
+
+.gadget-card > .additional-info {
+  list-style-type: none;
+}
+
+.gadget-card > .additional-info > li {
+  color: var(--gray-additional);
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--black);
+  color: #d9dbe1;
+}
+
+footer > h4 {
+  margin: 0 0 0.5rem;
+}
+
+.footer-icons {
+  margin-top: 1rem;
+}
+.footer-icons > .icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--gray);
+  line-height: 2.15;
+  margin-right: 0.3rem;
+}
