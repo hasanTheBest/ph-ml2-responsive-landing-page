@@ -1,12 +1,14 @@
 /* ======= Google fonts - Roboto ======= */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400");
 
-/* ======= General ======= */
+/* ======================
+  General 
+ ===================== */
 :root {
-  --body-bg: #f1f1f1; /* body background */
-  --gray: #3a3a3a; /* header and menu item color */
-  --gray-additional: #787885; /* card description color*/
-  --pink: #e02c6d; /* Button */
+  --body-bg: #f1f1f1;
+  --gray: #3a3a3a;
+  --gray-additional: #787885;
+  --pink: #e02c6d;
 }
 * {
   margin: 0;
@@ -136,14 +138,21 @@ section {
 .go-to-top:hover .hover-effect {
   top: 0;
 }
+.section-title {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+}
 
-/* ======== Header ======== */
+/* ======================
+  Header
+ ===================== */
 header,
 .main-navigation {
   max-width: 1200px;
   margin: 0 auto;
 }
-/* Navigation */
+/* ============== Navigation ============ */
 .main-navigation {
   padding: 0 1.5rem;
   display: flex;
@@ -211,7 +220,9 @@ header,
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Banner */
+/* ======================
+  Banner
+ ===================== */
 .banner {
   display: flex;
   align-items: center;
@@ -244,7 +255,7 @@ header,
   cursor: pointer;
 }
 
-/* Banner Image */
+/* ========== Banner Image ============ */
 .banner-image {
   display: flex;
   justify-content: center;
@@ -264,7 +275,10 @@ header,
 .banner-image:hover > img {
   transform: rotate3d(0.5, -0.5, 1, 55deg);
 }
-/* Company Logos */
+
+/* ======================
+  Company Logos
+ ===================== */
 .company-logos {
   display: flex;
   justify-content: space-between;
@@ -279,14 +293,9 @@ header,
   max-height: 40px;
 }
 
-/* ================
+/* ===========================
   Gadgets Section
-=================== */
-.section-title {
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 3rem;
-}
+============================ */
 .gadget-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
@@ -333,7 +342,9 @@ header,
   color: var(--gray-additional);
 }
 
-/* =========== Categories ============ */
+/* ===========================
+  Categories 
+ ============================= */
 .category-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -378,7 +389,6 @@ header,
 .category-card-content > h4 {
   margin: 0 0 1rem 0;
 }
-
 .category-card-content > button {
   padding: 0.5rem 0.8rem;
   text-transform: lowercase;
@@ -391,11 +401,12 @@ header,
   max-width: 100%;
   height: 100%;
 }
-/* =========== Newsletter ============= */
+/* ===========================
+  Newsletter 
+ ============================= */
 .newsletter {
   text-align: center;
 }
-
 .newsletter > h5 {
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -408,7 +419,6 @@ header,
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
 .newsletter p {
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -431,7 +441,10 @@ header,
 .btn-newsletter > i {
   margin-right: 0.5rem;
 }
-/* Footer */
+
+/* ===========================
+  Footer
+ ============================= */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -445,12 +458,12 @@ footer > small {
 footer > h4 {
   margin: 0.5rem 0;
 }
-
 .footer-icons {
   margin-top: 1rem;
 }
 .footer-icons > .icon {
   display: inline-block;
+  color: inherit;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -464,10 +477,9 @@ footer > h4 {
   color: var(--pink);
 }
 
-/* =========== ============
-  Media Queries 
-================ ======== */
-/* @import url("/css/responsive.css"); */
+/* =========== ======================
+          Media Queries 
+================ ================= */
 
 /* ========= Mobile <= 600 ========== */
 @media (max-width: 600px) {
@@ -488,7 +500,7 @@ footer > h4 {
     display: none;
   }
 
-  /* Banner */
+  /* ============ Banner ============ */
   .banner {
     flex-direction: column-reverse;
     justify-content: center;
@@ -502,17 +514,17 @@ footer > h4 {
     margin-bottom: 2rem;
   }
 
-  /* Company Logos */
+  /* ========== Company Logos =========== */
   .company-logos {
     display: none;
   }
 
-  /*  Gadgets Section  */
+  /* ========= Gadgets Section ============== */
   .gadget-cards {
     grid-template-columns: 1fr;
   }
 
-  /* Categories Section */
+  /* ======== Categories Section ========= */
   .category-cards {
     grid-template-columns: 1fr;
   }
@@ -524,7 +536,7 @@ footer > h4 {
     flex-direction: row-reverse;
   }
 
-  /* Newsletter Form */
+  /* ======= Newsletter Form ============ */
   .newsletter-form > input {
     width: 250px;
     margin-bottom: 1rem;
@@ -535,7 +547,7 @@ footer > h4 {
   html {
     font-size: 14px;
   }
-  /* Banner */
+  /*===== Banner ====== */
   .banner {
     flex-direction: column-reverse;
     justify-content: center;
@@ -553,12 +565,12 @@ footer > h4 {
     margin: 0 auto;
   }
 
-  /* Company images */
+  /* ======= Company images ====== */
   .company-logos {
     display: none;
   }
 
-  /* Gadget Cards */
+  /* ========= Gadget Cards =========== */
   .gadget-cards {
     grid-template-columns: repeat(2, minmax(300px, 1fr));
   }
