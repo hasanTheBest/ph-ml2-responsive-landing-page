@@ -291,6 +291,64 @@ header {
   color: var(--gray-additional);
 }
 
+/* =========== Categories ============ */
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #dfe5ec;
+  border-radius: 0.3rem;
+}
+.category-card:nth-child(3),
+.category-card:nth-child(4) {
+  flex-direction: row-reverse;
+}
+.category-card > div {
+  flex-basis: 50%;
+}
+.category-card-content {
+  padding: 1.5rem;
+}
+.category-card-content > h6 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin: 0;
+  position: relative;
+  padding-left: 1rem;
+}
+.category-card-content > h6::before {
+  content: "";
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--pink);
+  margin-left: -1rem;
+  margin-top: 2.5px;
+}
+.category-card-content > h4 {
+  margin: 0 0 1rem 0;
+}
+
+.category-card-content > button {
+  padding: 0.5rem 0.8rem;
+  text-transform: lowercase;
+  font-weight: 400;
+}
+.category-card-image {
+  align-self: stretch;
+}
+.category-card-image > img {
+  max-width: 100%;
+  height: 100%;
+}
 /* =========== Newsletter ============= */
 .newsletter {
   text-align: center;
