@@ -12,23 +12,23 @@
     ></script>
   </head>
   <body>
-    <header>
-      <nav class="main-navigation">
-        <div class="logo">
-          <h4>Gadget<span>Land</span></h4>
-        </div>
-        <!-- Menu -->
-        <div class="menu">
-          <a href="#menu-1">Home</a><a href="#menu-2">Products</a
-          ><a href="#menu-3">Featured</a><a href="#menu-4">Notified</a>
-        </div>
-        <!-- Toolbox -->
-        <div class="toolbox">
-          <span class="icon"><i class="fas fa-search"></i></span>
-          <span class="icon"><i class="fas fa-shopping-cart"></i></span>
-        </div>
-      </nav>
-
+    <nav class="main-navigation">
+      <div class="logo">
+        <h4>Gadget<span>Land</span></h4>
+      </div>
+      <!-- Menu -->
+      <div class="menu">
+        <a href="#nav-home">Home</a><a href="#nav-gadgets">Gadgets</a
+        ><a href="#nav-categories">Categories</a
+        ><a href="#nav-newsletter">Newsletter</a>
+      </div>
+      <!-- Toolbox -->
+      <div class="toolbox">
+        <span class="icon"><i class="fas fa-search"></i></span>
+        <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+      </div>
+    </nav>
+    <header id="nav-home">
       <div class="banner">
         <div class="banner-info">
           <h1 class="banner-title">
@@ -61,7 +61,7 @@
       </div>
     </header>
     <main>
-      <section class="gadgets">
+      <section id="nav-gadgets" class="gadgets">
         <h2 class="section-title">Just Landed Gadgets</h2>
         <div class="gadget-cards">
           <div class="gadget-card">
@@ -114,7 +114,7 @@
           </div>
         </div>
       </section>
-      <section class="categories">
+      <section id="nav-categories" class="categories">
         <h2 class="section-title">Trending Categories</h2>
         <div class="category-cards">
           <div class="category-card">
@@ -159,7 +159,7 @@
           </div>
         </div>
       </section>
-      <section class="newsletter">
+      <section id="nav-newsletter" class="newsletter">
         <h5>Newsletter</h5>
         <h3>Get discount 30% Off</h3>
         <p>
@@ -175,6 +175,9 @@
           </button>
         </form>
       </section>
+      <a href="#nav-home" class="btn go-to-top"
+        ><span class="hover-effect"></span> &uarr;</a
+      >
     </main>
     <footer>
       <h4>Gadget Land</h4>

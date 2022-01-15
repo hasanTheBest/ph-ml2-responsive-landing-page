@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -32,7 +33,8 @@ body {
   line-height: 1.75;
   color: #000000;
 }
-button {
+button,
+.btn {
   background-color: var(--pink);
   font-family: "Roboto", sans-serif;
   padding: 0.8rem 1.2rem;
@@ -47,7 +49,8 @@ button {
   overflow: hidden;
   box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
 }
-button > .hover-effect {
+button > .hover-effect,
+.btn > .hover-effect {
   position: absolute;
   top: 0;
   left: -100%;
@@ -57,16 +60,19 @@ button > .hover-effect {
   z-index: -1;
   transition: all 0.3s ease-in-out;
 }
-button:hover {
+button:hover,
+.btn:hover {
   cursor: pointer;
 }
-button:hover > .hover-effect {
+button:hover > .hover-effect,
+.btn:hover > .hover-effect {
   left: 0;
 }
 main {
   max-width: 1047px;
   margin: 0 auto;
 }
+
 p {
   margin-bottom: 1rem;
 }
@@ -111,15 +117,47 @@ header,
 section {
   padding: 3rem 1.5rem;
 }
+
+.go-to-top {
+  position: sticky;
+  bottom: 1rem;
+  left: calc(100% - 2.5rem);
+  width: 2.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
+}
+
+.go-to-top > .hover-effect {
+  bottom: 0;
+  left: 0;
+  top: 100%;
+}
+
+.go-to-top:hover .hover-effect {
+  top: 0;
+}
+
 /* ======== Header ======== */
-header {
+header,
+.main-navigation {
   max-width: 1200px;
   margin: 0 auto;
 }
 /* Navigation */
 .main-navigation {
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin-top: 3rem;
+  background-color: var(--body-bg);
 }
 .logo > h4 {
   margin: 0;
