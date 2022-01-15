@@ -4,13 +4,8 @@
 /* ======= General ======= */
 :root {
   --body-bg: #f1f1f1; /* body background */
-  --white: #ffffff; /* card background */
   --gray: #3a3a3a; /* header and menu item color */
   --gray-additional: #787885; /* card description color*/
-  --gray3: #5e6366; /* rating text color */
-  --black: #000000; /* card title color */
-  --gray2: #18191f; /* cart, menu icon and price color */
-  --orange: #fb8200; /* rating icon color */
   --pink: #e02c6d; /* Button */
 }
 * {
@@ -198,7 +193,7 @@ header,
   height: 3rem;
   border-radius: 1.5rem;
   line-height: 3;
-  color: var(--gray2);
+  color: #18191f;
   text-align: center;
   transition: all 0.3s ease;
 }
@@ -246,7 +241,7 @@ header,
   justify-content: center;
   align-items: center;
   perspective: 800px;
-  background-image: url(images/Circle\ design.svg);
+  background-image: url(images/Circle.svg);
   background-size: 70%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -289,7 +284,7 @@ header,
   grid-gap: 2rem;
 }
 .gadget-card {
-  background-color: var(--white);
+  background-color: #fff;
   padding: 1rem;
   border-radius: 0.3rem;
   box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.2);
@@ -311,7 +306,7 @@ header,
 }
 
 .gadget-rating > i {
-  color: var(--orange);
+  color: #fb8200;
 }
 .gadget-rating > span {
   color: var(--gray-additional);
@@ -431,7 +426,6 @@ header,
 footer {
   text-align: center;
   padding: 1.5rem;
-  background-color: var(--black);
   background-color: #0a0826;
   color: #d9dbe1;
   margin-top: 3rem;
