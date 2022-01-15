@@ -460,3 +460,100 @@ footer > h4 {
   cursor: pointer;
   color: var(--pink);
 }
+
+/* =========== ============
+  Media Queries 
+================ ======== */
+/* @import url("/css/responsive.css"); */
+
+/* ========= Mobile <= 600 ========== */
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  .main-navigation {
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  .menu {
+    display: none;
+  }
+  .toolbox > .icon:first-child {
+    display: none;
+  }
+
+  /* Banner */
+  .banner {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  .banner > div {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .banner-image {
+    margin-bottom: 2rem;
+  }
+
+  /* Company Logos */
+  .company-logos {
+    display: none;
+  }
+
+  /*  Gadgets Section  */
+  .gadget-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Categories Section */
+  .category-cards {
+    grid-template-columns: 1fr;
+  }
+  .category-card:nth-child(3),
+  .category-card:nth-child(4) {
+    flex-direction: row;
+  }
+  .category-card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  /* Newsletter Form */
+  .newsletter-form > input {
+    width: 250px;
+    margin-bottom: 1rem;
+  }
+}
+/* ========= Tablet <= 900 ========== */
+@media (min-width: 600.01px) and (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+  /* Banner */
+  .banner {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  .banner > div {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .banner-image {
+    margin-bottom: 3rem;
+  }
+  .banner-info {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* Company images */
+  .company-logos {
+    display: none;
+  }
+
+  /* Gadget Cards */
+  .gadget-cards {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
