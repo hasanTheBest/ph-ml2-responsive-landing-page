@@ -19,20 +19,49 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
-
 html {
   font-size: 100%; /*16px*/
 }
-
+a {
+  text-decoration: none;
+}
 body {
   background: var(--body-bg);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.75;
   color: #000000;
+}
+button {
+  background-color: var(--pink);
+  font-family: "Roboto", sans-serif;
+  padding: 0.8rem 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+  color: #dfe5ec;
+  border: 0;
+  border-radius: 0.3rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+}
+button > .hover-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #22213c;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+}
+button:hover > .hover-effect {
+  left: 0;
 }
 main {
   max-width: 1047px;
@@ -91,13 +120,16 @@ header {
 .main-navigation {
   display: flex;
   align-items: center;
-  padding: 0 1.5rem;
 }
 .logo > h4 {
   margin: 0;
   color: var(--gray);
   font-weight: 500;
-  letter-spacing: 2;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+}
+.logo > h4 > span {
+  color: var(--pink);
 }
 
 .menu {
@@ -151,17 +183,15 @@ header {
   font-weight: 700;
 }
 .banner-lead-text {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: calc(1rem + 2px);
   letter-spacing: 0.25px;
 }
 .banner-btn {
-  background-color: var(--pink);
-  padding: 0.8rem 1.3rem;
+  padding: 0.9rem 1.5rem;
   border-radius: 0.5rem;
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 1.25px;
+  font-weight: 600;
+  letter-spacing: 2px;
   border: 0;
 }
 .banner-btn > i {
@@ -211,6 +241,7 @@ header {
   Gadgets Section
 =================== */
 .section-title {
+  font-weight: 600;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -253,23 +284,67 @@ header {
 .gadget-card > .additional-info {
   list-style-type: none;
   font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .gadget-card > .additional-info > li {
   color: var(--gray-additional);
-  font-weight: 500;
 }
 
+/* =========== Newsletter ============= */
+.newsletter {
+  text-align: center;
+}
+
+.newsletter > h5 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--pink);
+}
+.newsletter > h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.newsletter p {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.newsletter-form {
+  margin-top: 2rem;
+}
+.newsletter-form > input {
+  border: 2px solid #dfe5ec;
+  border-radius: 0.3rem;
+  color: var(--pink);
+  padding: 0.8rem 1.2rem;
+  width: 400px;
+  margin-right: -5px;
+  letter-spacing: 0.15px;
+}
+.newsletter-form > input:focus {
+  border-color: var(--pink);
+}
+.btn-newsletter > i {
+  margin-right: 0.5rem;
+}
 /* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: var(--black);
+  background-color: #0a0826;
   color: #d9dbe1;
+  margin-top: 3rem;
 }
-
+footer > small {
+  line-height: 1;
+}
 footer > h4 {
-  margin: 0 0 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .footer-icons {
@@ -280,7 +355,12 @@ footer > h4 {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: var(--gray);
+  background-color: #22213c;
   line-height: 2.15;
   margin-right: 0.3rem;
+  transition: all 0.2s ease;
+}
+.footer-icons > .icon:hover {
+  cursor: pointer;
+  color: var(--pink);
 }
