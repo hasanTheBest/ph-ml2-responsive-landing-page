@@ -154,6 +154,9 @@ header,
   margin-top: 3rem;
   background-color: var(--body-bg);
 }
+.menu-drawer {
+  display: none;
+}
 .logo > h4 {
   margin: 0;
   color: var(--gray);
@@ -188,6 +191,7 @@ header,
   display: flex;
   align-items: center;
 }
+.menu-drawer > i,
 .toolbox > .icon {
   width: 3rem;
   height: 3rem;
@@ -196,6 +200,11 @@ header,
   color: #18191f;
   text-align: center;
   transition: all 0.3s ease;
+}
+.menu-drawer > i {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.2);
 }
 .toolbox > .icon:hover {
   cursor: pointer;
@@ -468,6 +477,9 @@ footer > h4 {
   .main-navigation {
     justify-content: space-between;
     margin-top: 1rem;
+  }
+  .menu-drawer {
+    display: block;
   }
   .menu {
     display: none;
