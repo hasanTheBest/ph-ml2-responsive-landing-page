@@ -3,7 +3,7 @@
 
 /* ======= General ======= */
 :root {
-  --body-bg: #aaaaaa; /* body background */
+  --body-bg: #f1f1f1; /* body background */
   --white: #ffffff; /* card background */
   --gray: #3a3a3a; /* header and menu item color */
   --gray-additional: #787885; /* card description color*/
@@ -34,7 +34,10 @@ body {
   line-height: 1.75;
   color: #000000;
 }
-
+main {
+  max-width: 1047px;
+  margin: 0 auto;
+}
 p {
   margin-bottom: 1rem;
 }
@@ -75,8 +78,15 @@ small,
 .text_small {
   font-size: 0.8rem;
 }
-
+header,
+section {
+  padding: 3rem 1.5rem;
+}
 /* ======== Header ======== */
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 /* Navigation */
 .main-navigation {
   display: flex;
@@ -130,6 +140,8 @@ small,
 /* Banner */
 .banner {
   display: flex;
+  align-items: center;
+  padding: 3rem 0;
 }
 .banner > div {
   flex-basis: 50%;
@@ -165,19 +177,31 @@ small,
   display: flex;
   justify-content: center;
   align-items: center;
+  perspective: 800px;
+  background-image: url(images/Circle\ design.svg);
+  background-size: 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .banner-image > img {
   max-width: 70%;
   height: auto;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
 }
-
+.banner-image:hover > img {
+  transform: rotate3d(0.5, -0.5, 1, 55deg);
+}
 /* Company Logos */
 .company-logos {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem;
-  border: 2px solid var(--gray3);
+  border-top: 1px solid #dfe5ec;
+  border-bottom: 1px solid #dfe5ec;
+  margin-top: 5rem;
+  height: 110px;
+  padding: 0 2rem;
 }
 .company-logos > img {
   max-height: 40px;
@@ -188,6 +212,7 @@ small,
 =================== */
 .section-title {
   text-align: center;
+  margin-bottom: 3rem;
 }
 .gadget-cards {
   display: grid;
@@ -197,6 +222,8 @@ small,
 .gadget-card {
   background-color: var(--white);
   padding: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.2);
 }
 .gadget-image {
   max-width: 100%;
@@ -211,7 +238,7 @@ small,
   display: flex;
   align-items: center;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .gadget-rating > i {
@@ -220,10 +247,12 @@ small,
 .gadget-rating > span {
   color: var(--gray-additional);
   margin-left: 1rem;
+  font-weight: 600;
 }
 
 .gadget-card > .additional-info {
   list-style-type: none;
+  font-weight: 600;
 }
 
 .gadget-card > .additional-info > li {
